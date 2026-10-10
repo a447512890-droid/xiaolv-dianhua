@@ -20,7 +20,7 @@ def main():
     files = [
         "原型/index.html", "原型/app.js", "原型/styles.css",
         "原型/requirements-data.js", "docs/产品需求/客户字段需求.md",
-        "docs/产品需求/需求列表.md", "docs/更新日志.md",
+        "docs/产品需求/需求列表.md", "docs/产品需求/效率拨号产品功能清单.md", "docs/更新日志.md",
         "docs/商店资料/元数据.md", "docs/商店资料/元数据2.md",
     ]
     for name in files:

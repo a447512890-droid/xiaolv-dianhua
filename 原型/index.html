@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#edf7f5">
-  <title>待办电话 · 客户沟通需求原型</title>
+  <title>待办电话 · 联系人沟通需求原型</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="shell">
     <header class="workspace-header">
-      <div class="brand-lockup"><span class="brand-mark" aria-hidden="true">待</span><div><strong>待办电话</strong><small>客户沟通需求原型</small></div></div>
+      <div class="brand-lockup"><span class="brand-mark" aria-hidden="true">待</span><div><strong>待办电话</strong><small>联系人沟通需求原型</small></div></div>
       <div class="header-meta"><span class="meta-pill">需求原型</span></div>
-      <button class="mobile-spec-toggle module-link" type="button" data-action="toggle-spec" aria-label="打开模块说明"><span class="annotation-dot" aria-hidden="true"></span></button>
+      <button class="mobile-spec-toggle module-link" type="button" data-action="toggle-spec" aria-label="展开或收起模块说明" aria-controls="spec-panel" aria-expanded="false"><span class="annotation-dot" aria-hidden="true"></span></button>
     </header>
 
     <div class="workspace-grid">
       <aside class="journey" aria-label="原型导航">
         <div class="doc-brand"><span>PRODUCT MAP</span><strong>待办电话 · 需求原型</strong></div>
-        <div class="journey-intro"><span class="eyebrow">PRODUCT FLOW</span><h1>一次电话，<br>接续下一步。</h1><p>选择客户、回顾背景、整理沟通，再把约定变成待办。</p></div>
+        <div class="journey-intro"><span class="eyebrow">PRODUCT FLOW</span><h1>一次电话，<br>接续下一步。</h1><p>选择联系人、回顾背景、整理沟通，再把约定变成待办。</p></div>
         <nav id="journey-nav" class="journey-nav" aria-label="页面导航"></nav>
         <div class="journey-note"><span class="note-dot"></span><span>通话采集、模型及系统提醒能力待确认。</span></div>
       </aside>
@@ -26,11 +26,12 @@
       <main class="stage" id="main-content">
         <div class="stage-header"><div><span class="eyebrow" id="stage-kicker">沟通 / 拨号</span><h2 id="stage-title">拨号</h2><p id="stage-description">输入号码，点击呼叫。</p></div><span class="stage-counter" id="stage-counter">01 / 10</span></div>
         <div id="document-content" class="document-content" aria-live="polite"></div>
+        <div id="workspace-state-tabs" class="workspace-state-tabs-host" aria-label="原型状态切换"></div>
         <div class="phone-wrap"><div class="phone-frame"><div class="phone-screen"><div class="phone-status" aria-hidden="true"><span>9:41</span><span class="dynamic-island"></span><span class="status-icons">●●● ▰</span></div><div id="phone-content" class="phone-content"></div><div class="home-indicator" aria-hidden="true"></div></div></div></div>
         <div class="stage-foot"><span>点击波纹圆点可查看对应 PRD 条目</span><div><button type="button" class="stage-arrow" id="prev-page" aria-label="上一页">←</button><button type="button" class="stage-arrow" id="next-page" aria-label="下一页">→</button></div></div>
       </main>
 
-      <aside class="spec-panel" id="spec-panel" aria-label="需求说明面板"><div class="spec-top"><div><span class="eyebrow">REQUIREMENT NOTES</span><h2>模块需求说明</h2></div><button type="button" class="spec-close" data-action="toggle-spec" aria-label="关闭需求说明">×</button></div><p class="spec-hint">内容取自《docs/产品需求/需求说明.md》，并按页面映射到界面模块。</p><div id="spec-module-list" class="spec-module-list"></div><div id="spec-detail" class="spec-detail"></div><div class="spec-footer">产品规格草案 · 未定能力保留“待确认”标记</div></aside>
+      <aside class="spec-panel" id="spec-panel" aria-hidden="true" inert aria-label="需求说明面板"><div class="spec-top"><div><span class="eyebrow">REQUIREMENT NOTES</span><h2>模块需求说明</h2></div><button type="button" class="spec-close" data-action="close-spec" aria-label="关闭需求说明">×</button></div><p class="spec-hint">内容取自《docs/产品需求/需求说明.md》，并按页面映射到界面模块。</p><div id="spec-module-list" class="spec-module-list"></div><div id="spec-detail" class="spec-detail"></div><div class="spec-footer">产品规格草案 · 未定能力保留“待确认”标记</div></aside>
     </div>
   </div>
   <div id="modal-root"></div>
