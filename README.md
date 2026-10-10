@@ -82,4 +82,4 @@ python3 scripts/preview.py
 
 `.pages/` 已加入忽略规则。发布前若修改模块说明或商店图，应先运行对应生成脚本。发布入口为输出目录的 `index.html`，原型仍保留 `#` 页面路由。
 
-GitHub Pages 的实际启用取决于仓库可见性与账号套餐。2026-10-10 对现有私有仓库启用 Pages 时，GitHub 返回当前套餐不支持；尚未生成可访问的网站地址。后续可升级套餐继续使用私有仓库，或另建公开展示仓库。
+2026-10-10 按用户要求将仓库改为公开，并从 `gh-pages` 分支根目录发布 GitHub Pages。公开访问地址：https://a447512890-droid.github.io/xiaolv-dianhua/ 。`main` 保存完整项目，`gh-pages` 保存发布文件。修改 main 不会自动更新网站；更新网站需先更新模块/图片生成数据，再将重新生成的 Pages 文件提交到 gh-pages。生成脚本要求空输出目录，已有 `.pages/` 发布目录时请使用 `--output` 指定新的空目录。
