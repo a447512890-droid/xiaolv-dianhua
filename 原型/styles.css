@@ -52,3 +52,47 @@
 @media(prefers-reduced-motion:reduce){.annotation-dot::before,.annotation-dot::after{animation:none;opacity:.2}.annotation-dot::after{display:none}}
 
 .dial-input-region{position:relative;padding-top:17px;margin-bottom:18px}.dial-input-region>.module-link{position:absolute;top:-5px;right:0}
+
+.customer-phones{display:grid;gap:10px;margin:12px 0}.customer-phone-row{display:flex;align-items:center;gap:7px}.customer-phone-row .input-field{min-width:0;flex:1;margin:0}.customer-phone-row .dial-country{font-size:13px;padding-right:5px}.customer-phone-row .micro-button{flex:none}.secondary-button:disabled{opacity:.45;cursor:not-allowed}
+
+.membership-banner{display:flex;align-items:center;gap:12px;padding:17px;border-radius:14px;background:#f2f6f7;color:#536c7a}.membership-banner.active{background:linear-gradient(120deg,#10364a,#175c60);color:#d5f6ec}.membership-crown{font-size:32px}.membership-banner strong{font-size:15px}.membership-banner p{font-size:10px;line-height:1.6;margin:5px 0 0}.membership-rights{padding:5px 0;font-size:11px;color:#15957e}.membership-rights .locked{color:#8798a4}.subscription-plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:13px 0 17px}.subscription-plan{display:flex;flex-direction:column;gap:9px;align-items:center;border:1px solid #e1eae7;background:#fff;border-radius:13px;padding:15px 3px;color:#234654}.subscription-plan.selected{border-color:#0ba58d;background:#eaf8f2;box-shadow:0 0 0 1px #0ba58d}.subscription-plan strong{font-size:12px}.subscription-plan span{font-size:11px;color:#0c9b82}.subscription-plan small{font-size:9px;color:#8a9da3}.subscription-note{font-size:9px;line-height:1.6;color:#8b9da6;margin:11px 0 0}
+
+/* Collapsible requirement notes */
+.workspace-grid:not(.document-mode){grid-template-columns:258px minmax(390px,1fr) 0;transition:grid-template-columns .3s ease}
+.workspace-grid.spec-open:not(.document-mode){grid-template-columns:258px minmax(390px,1fr) 330px}
+.spec-panel{width:330px;min-width:0;visibility:hidden;opacity:0;transform:translateX(24px);pointer-events:none;transition:transform .3s ease,opacity .25s ease,visibility 0s .3s}
+.spec-panel.open{visibility:visible;opacity:1;transform:translateX(0);pointer-events:auto;transition-delay:0s}
+.spec-close{display:grid;place-items:center;flex:none;width:34px;height:34px;padding:0;border:1px solid #e1ece9;border-radius:10px;background:#f7fbfa;color:#365967;font-size:24px;line-height:1}
+.mobile-spec-toggle{display:grid}
+.dial-call-row{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:25px}
+.dial-body .dial-call-row .dial-call{flex:1;min-width:0;max-width:186px;margin:0;padding:0 12px}
+.call-mode-control{position:relative;flex:none;padding-top:0}
+.call-mode-control>.module-link{position:absolute;right:-3px;top:-20px}
+.call-mode-control select{height:44px;max-width:110px;border:1px solid #d6e8e3;border-radius:14px;padding:0 7px;background:#edf7f4;color:#147c70;font-size:11px;font-weight:700;cursor:pointer}
+.requirements-table th:nth-child(1),.requirements-table td:nth-child(1){width:7%}
+.requirements-table th:nth-child(2),.requirements-table td:nth-child(2){width:25%}
+.requirements-table th:nth-child(3),.requirements-table td:nth-child(3){width:54%}
+.requirements-table th:nth-child(4),.requirements-table td:nth-child(4){width:14%}
+@media(max-width:1180px){
+  .workspace-grid:not(.document-mode),.workspace-grid.spec-open:not(.document-mode){grid-template-columns:218px minmax(390px,1fr)}
+  .spec-panel{width:min(370px,100vw);transform:translateX(102%)}
+  .spec-panel.open{transform:translateX(0)}
+}
+@media(max-width:720px){.dial-call-row{margin-top:18px}.spec-panel{width:min(370px,100vw)}}
+@media(prefers-reduced-motion:reduce){.workspace-grid:not(.document-mode),.spec-panel{transition:none}}
+
+.workspace-state-tabs-host{width:min(100%,624px);display:flex;justify-content:center;margin:-5px 0 16px}.workspace-state-tabs{display:flex;align-items:center;gap:5px;padding:5px 7px;border:1px solid #dcebe7;border-radius:13px;background:#ffffffd9;box-shadow:0 5px 18px #184b400b}.workspace-state-tabs>span{padding:0 9px;color:#8498a1;font-size:10px;font-weight:750}.workspace-state-tabs button{border:0;border-radius:9px;background:transparent;padding:8px 13px;color:#657d87;font-size:11px;font-weight:700}.workspace-state-tabs button.active{background:#dff5ef;color:#087e70;box-shadow:inset 0 0 0 1px #bde9df}.workspace-state-tabs button:focus-visible{outline:2px solid #50bfa8;outline-offset:2px}@media(max-width:720px){.workspace-state-tabs-host{margin:-3px auto 10px;width:min(100%,386px)}}
+
+/* Dial action: wide centered call button, mode below */
+.dial-call-row{flex-direction:column;align-items:center;gap:12px;width:min(280px,100%)}
+.dial-body .dial-call-row .dial-call{flex:none;width:100%;max-width:none;min-width:0;margin:0}
+.call-mode-control{display:flex;align-items:center;justify-content:center;min-height:42px}
+.call-mode-control>.module-link{right:-17px;top:-9px}
+.call-mode-control select{max-width:none;min-width:100px;height:36px;border-radius:100px;text-align:center;text-align-last:center}
+@media(max-width:720px){.dial-call-row{margin-top:18px}}
+
+/* Keep the full dialing field inside the phone viewport. */
+.dial-body .dial-input-region{width:100%;min-width:0;max-width:100%}
+.dial-body .dial-number-box{width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+.dial-body .dial-number-box input{width:0;min-width:0;flex:1 1 0}
+.dial-body .dial-country,.dial-body .dial-delete{flex:none}
